@@ -1,0 +1,39 @@
+{
+ "layer": "top",
+ "position": "top",
+ "modules-right": ["cpu", "battery", "tray"],
+ "modules-center": ["clock", "pulseaudio"],
+ "modules-left": ["custom/powermenu", "custom/screenrecord"],
+ "clock": {
+  "format": "{:%A, %B %d, %Y (%I:%M:%S %p)}",
+  "interval": 1,
+  "timezones": ["Asia/Dubai"]
+  },
+ "battery": {
+  "bat": "BAT0",
+  "tooltip": true,
+  "tooltip-format": "Battery Capacity: {capacity}%\nTime Until Dead: {time}"
+ },
+ "cpu": {
+  "format": "CPUL: {load}%",
+  "tooltip": true,
+  "tooltip-format": "CPU Load: {load}%\nCPU Usage: {usage}%\n",
+  "interval": 1
+ },
+ "pulseaudio": {
+  "format": "cVol: {volume}%",
+  "format-bluetooth": "cVol: {volume}%",
+  "on-click": "pavucontrol",
+  "format-muted": "Muted"
+ },
+ "custom/powermenu": {
+  "format": "",
+  "tooltip": "Power Menu",
+  "on-click": "/home/hamad/.config/waybar/components/powermenu.sh"
+ },
+ "custom/screenrecord": {
+    "exec": "/home/hamad/.config/waybar/components/check-recording.sh",
+    "interval": 1,
+    "return-type": "json"
+ }
+}

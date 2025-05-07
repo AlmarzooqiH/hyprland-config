@@ -1,0 +1,21 @@
+* {
+  font-family: "Anton", sans-serif;
+  margin: 2px 5px;
+
+}
+
+#custom-powermenu,#custom-screenrecord, #clock, #pulseaudio, #cpu, #battery{
+  color: white;
+}
+
+window#waybar {
+  background: rgba(52, 52, 52, 1);
+  border: 1px solid rgba(104, 161, 136, 0.75);
+  border-radius: 8px;
+}
+
+#clock:hover{
+ color: black;
+ background-color: rgba(255, 255, 255, 0.75);
+}
+
